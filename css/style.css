@@ -1,0 +1,213 @@
+body {
+  background-color: #000;
+  font-family: "Cormorant Garamond", serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  position: relative;
+}
+
+.logo-div {
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  z-index: 10;
+  padding: 10px 0;
+  font-size: 50px;
+}
+
+.logo {
+  font-family: "Playwrite IN", sans-serif;
+  text-align: center;
+  color: #a1a1a1;
+}
+
+.quotes {
+  color: #a1a1a1;
+  font-size: 25px;
+  text-align: center;
+  display: block;
+  margin-top: 200px;
+  transition: opacity 0.5s ease;
+}
+
+.details-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Două coloane egale */
+  gap: 20px; /* Spațiu între coloane */
+  padding: 35px;
+  background-color: #000; /* Fundal negru */
+  margin-top: 50px; /* Spațiu față de secțiunea anterioară */
+  width: 100%; /* Se asigură că secțiunea ocupă întreaga lățime */
+  box-sizing: border-box; /* Include padding în lățimea totală */
+}
+
+.details {
+  display: contents; /* Evită stilurile implicite ale containerului */
+}
+
+.details p {
+  margin: 0;
+  padding: 10px;
+  font-size: 25px;
+  line-height: 1.5;
+  color: #a1a1a1;
+  text-align: justify; /* Aliniere justificată pentru un aspect mai elegant */
+  padding-top: 20%;
+}
+
+.details img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px; /* Colțuri rotunjite pentru imagini */
+  justify-self: center; /* Poziționează imaginile la centru */
+  margin-top: 50px;
+}
+
+.details-section .details > * {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Când elementele devin vizibile */
+.details-section .details > *._visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsivitate pentru dispozitive mici */
+@media (max-width: 768px) {
+  .details-section {
+    grid-template-columns: 1fr; /* O singură coloană pe ecrane mici */
+  }
+}
+
+.buy {
+  width: 70%;
+  margin-top: 50px;
+  margin-left: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.buy img {
+  max-width: 100%;
+  height: auto;
+}
+
+.buy .description {
+  color: #a1a1a1;
+  margin-top: 70px;
+  text-align: center;
+  font-size: 30px;
+}
+
+.buy .buy-btn {
+  color: #fff;
+  background-color: rgb(29, 84, 193);
+  font-size: 20px;
+  padding: 5px 60px 5px 60px;
+  border: none;
+  margin-bottom: 30px;
+}
+
+.buy .buy-btn:hover {
+  cursor: pointer;
+  background-color: rgb(19, 55, 126);
+}
+
+.cart-section {
+  display: none;
+  background-color: #000;
+  text-align: center;
+  padding: 50px 200px 200px 200px;
+}
+
+.cart-section h2 {
+  font-family: "Playwrite IN", sans-serif;
+  font-size: 50px;
+  color: #a1a1a1;
+  margin-bottom: 200px;
+}
+
+.cart-section #cart-items {
+  color: #a1a1a1;
+  font-size: 25px;
+}
+
+.cart-section #cart-total {
+  color: #a1a1a1;
+  font-size: 20px;
+}
+
+.cart-section .checkout {
+  color: #fff;
+  background-color: rgb(29, 84, 193);
+  font-size: 20px;
+  padding: 5px 25px 5px 25px;
+  border: none;
+  margin-bottom: 30px;
+}
+.cart-section .checkout:hover {
+  cursor: pointer;
+  background-color: rgb(19, 55, 126);
+}
+
+.cart-section .clear-cart {
+  color: #fff;
+  background-color: #a1a1a1;
+  font-size: 20px;
+  padding: 5px 20px 5px 20px;
+  border: none;
+  margin-bottom: 30px;
+}
+.cart-section .clear-cart:hover {
+  cursor: pointer;
+  background-color: #4e4e4e;
+}
+
+.cart-section button {
+  color: #fff;
+  background-color: #a1a1a1;
+  padding: 3px 7px 3px 7px;
+  font-size: 10px;
+  margin-left: 10px;
+  border: none;
+}
+.cart-section button:hover {
+  cursor: pointer;
+  background-color: #4e4e4e;
+}
+
+@media (max-width: 768px) {
+  .logo-div {
+    font-size: 30px;
+  }
+
+  .quotes {
+    font-size: 20px;
+    margin-bottom: 200px;
+  }
+
+  .details p {
+    font-size: 20px;
+  }
+
+  .buy .description {
+    font-size: 20px;
+  }
+
+  .cart-section {
+    padding: 0;
+  }
+
+  .cart-section h2 {
+    font-size: 30px;
+  }
+}
